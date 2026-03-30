@@ -1,0 +1,18 @@
+:root {
+    --primary-color: #C14953;
+    --secondary-color: #424B54;
+    --bg-color: #FFFFFF;
+}
+
+.greeting > * {
+    text-align: center;
+}
+
+h1 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+p {
+    color: var(--secondary-color);
+}
