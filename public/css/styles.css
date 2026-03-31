@@ -1,6 +1,7 @@
 :root {
     --primary-color: #C14953;
     --secondary-color: #424B54;
+    --tertiary-color: #83878a;
     --bg-color: #FFFFFF;
 }
 
@@ -15,4 +16,43 @@ h1 {
 
 p {
     color: var(--secondary-color);
+}
+
+.add-task-wrapper {
+    display: flex;
+    align-content: center;
+    margin: 2rem 20rem;
+    border: var(--secondary-color) solid 1px;
+    border-radius: 1rem;
+}
+
+.add-task {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 12px;
+    width: 80%;
+    padding: 2rem;
+}
+
+.input-task{
+    display: flex;
+    gap: 6px;
+    flex-basis: 100%;
+}
+
+input[type="text"] {
+    background-color: var(--tertiary-color);
+    display: inline-block;
+    flex: 1;
+}
+
+input[type="submit"] {
+    display: inline-block;
+    width: max-content;
+}
+
+.task-modifiers {
+    display: flex;
+    flex: 1 0 50%;
 }

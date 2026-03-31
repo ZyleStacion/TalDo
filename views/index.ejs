@@ -11,24 +11,34 @@
         <h1>Welcome to TalDo</h1>
         <p>Control your digital world - focus on focus.</p>
     </div>
-    <form class="add-task">
-        <input type="text" id="task" placeholder="Add a new task...">
-        <input type="submit" id="submit" value="Add task"><br>
-        
-        <label for="category">Category</label>
-        <select name="category" id="category">
-            <option>Personal</option>
-            <option>Work</option>
-            <option>School</option>
-            <option>Health</option>
-        </select>
+    <div class="add-task-wrapper">
+        <form class="add-task">
+            
+            <!-- Add task text + button -->
+            <div class="input-task">
+                <input type="text" id="task" placeholder="Add a new task...">
+                <input type="submit" id="submit" value="Add task">
+            </div>
 
-        <label for="priority">Priority</label>
-        <select name="priority" id="priority">
-            <option>Low</option>
-            <option>Medium</option>
-            <option>High</option>
-        </select>
-    </form>
+            <!-- Category, priority for tasks -->
+            <div class="task-modifiers">
+                <label for="category">Category</label>
+                <select name="category" id="category">
+                    <option>Personal</option>
+                    <option>Work</option>
+                    <option>School</option>
+                    <option>Health</option>
+                </select>
+
+                <label for="priority">Priority</label>
+                <select name="priority" id="priority">
+                    <option>Low</option>
+                    <option>Medium</option>
+                    <option>High</option>
+                </select>
+            </div>
+        
+        </form>
+    </div>
 </body>
 </html>
