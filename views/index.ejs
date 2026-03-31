@@ -11,8 +11,24 @@
         <h1>Welcome to TalDo</h1>
         <p>Control your digital world - focus on focus.</p>
     </div>
-    <div class="add-task">
+    <form class="add-task">
+        <input type="text" id="task" placeholder="Add a new task...">
+        <input type="submit" id="submit" value="Add task"><br>
         
-    </div>
+        <label for="category">Category</label>
+        <select name="category" id="category">
+            <option>Personal</option>
+            <option>Work</option>
+            <option>School</option>
+            <option>Health</option>
+        </select>
+
+        <label for="priority">Priority</label>
+        <select name="priority" id="priority">
+            <option>Low</option>
+            <option>Medium</option>
+            <option>High</option>
+        </select>
+    </form>
 </body>
 </html>
