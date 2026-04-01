@@ -33,9 +33,8 @@ app.post("/add-task", (req, res) =>{
     tasks.push({ task, category, priority });
     console.log(tasks);
 
-    // Render the tasks in a new div
-    res.status(201);
-    res.render('index', { tasks: tasks });
+    // Redirect back to index (now with tasks)
+    res.redirect('/');
 })
 
 app.listen(PORT, (error) => {
