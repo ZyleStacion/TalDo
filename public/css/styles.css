@@ -18,7 +18,7 @@ p {
     color: var(--secondary-color);
 }
 
-.add-task-wrapper {
+.section-wrapper {
     display: flex;
     align-content: center;
     margin: 2rem 30rem;
@@ -61,4 +61,18 @@ input[type="submit"] {
     display: flex;
     flex: 1 0 50%;
     gap: 6px;
+}
+
+.section-wrapper--task {
+    text-align: center;
+    flex-flow: column;
+    flex-wrap: wrap;
+}
+
+.section-wrapper--task > h2 {
+    margin-bottom: 1rem;
+}
+
+.section-wrapper--task > p {
+    margin-top: 0px;
 }

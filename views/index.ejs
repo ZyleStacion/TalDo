@@ -14,7 +14,7 @@
     </div>
     
     <!-- Add task utility -->
-    <div class="add-task-wrapper">
+    <div class="section-wrapper">
         <form name="add-task" action="/add-task" method="POST" class="add-task">
             <!-- Add task text + button -->
             <div class="input-task">
@@ -43,8 +43,21 @@
     </div>
 
     <!-- Render each task -->
-    <div>
-
+    <div class="task-list">
+        <% if (tasks.length === 0) { %>
+            <div class="section-wrapper section-wrapper--task">
+                <h2>All done for now!</h2>
+                <p>Add some tasks to continue being productive.</p>
+            </div>
+        <% } else { %>
+         <% tasks.forEach(item => { %>
+            <div class="section-wrapper section-wrapper--task">
+                <h2><%= item.task %></h2>
+                <p><%= item.category %></p>
+                <p><%= item.priority %></p>
+            </div>
+         <% }); %>
+        <% } %>
     </div>
 </body>
 </html>

@@ -20,20 +20,22 @@ app.use(express.urlencoded({ extended: true }));
 
 app.set('view engine', 'ejs');
 
+const tasks: { task: any; category: any; priority: any; }[] = [];
+
 app.get("/", (req, res) => {
     res.status(500);
-    res.render('index');
+    res.render('index', { tasks: tasks });
 })
-
-const tasks: { task: any; category: any; priority: any; }[] = [];
 
 app.post("/add-task", (req, res) =>{
     // Store the task as a JSON object
     const { task, category, priority } = req.body;
     tasks.push({ task, category, priority });
     console.log(tasks);
+
+    // Render the tasks in a new div
     res.status(201);
-    res.render('index');
+    res.render('index', { tasks: tasks });
 })
 
 app.listen(PORT, (error) => {
