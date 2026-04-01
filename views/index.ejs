@@ -7,16 +7,18 @@
     <title>TalDo</title>
 </head>
 <body>
+    <!-- Greeting section -->
     <div class="greeting">
         <h1>Welcome to TalDo</h1>
         <p>Control your digital world - focus on focus.</p>
     </div>
+    
+    <!-- Add task utility -->
     <div class="add-task-wrapper">
-        <form class="add-task">
-            
+        <form name="add-task" action="/add-task" method="POST" class="add-task">
             <!-- Add task text + button -->
             <div class="input-task">
-                <input type="text" id="task" placeholder="Add a new task...">
+                <input type="text" id="task" name="task" placeholder="Add a new task...">
                 <input type="submit" id="submit" value="Add task">
             </div>
 
@@ -37,8 +39,12 @@
                     <option>High</option>
                 </select>
             </div>
-        
         </form>
+    </div>
+
+    <!-- Render each task -->
+    <div>
+
     </div>
 </body>
 </html>

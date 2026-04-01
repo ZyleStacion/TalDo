@@ -21,7 +21,7 @@ p {
 .add-task-wrapper {
     display: flex;
     align-content: center;
-    margin: 2rem 20rem;
+    margin: 2rem 30rem;
     border: var(--secondary-color) solid 1px;
     border-radius: 1rem;
 }
@@ -43,8 +43,13 @@ p {
 
 input[type="text"] {
     background-color: var(--tertiary-color);
-    display: inline-block;
+    color: var(--bg-color);
     flex: 1;
+    height: fit-content;
+}
+
+input[type="text"]::placeholder {
+    color: var(--bg-color);
 }
 
 input[type="submit"] {
@@ -55,4 +60,5 @@ input[type="submit"] {
 .task-modifiers {
     display: flex;
     flex: 1 0 50%;
+    gap: 6px;
 }

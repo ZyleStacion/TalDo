@@ -12,10 +12,11 @@
   "type": "module",
   "dependencies": {
     "ejs": "^5.0.1",
-    "express": "^5.2.1"
+    "express-validator": "^7.3.1"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
+    "express": "^5.2.1",
     "ts-node": "^10.9.2",
     "typescript": "^6.0.2"
   }
