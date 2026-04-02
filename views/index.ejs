@@ -51,7 +51,7 @@
             </div>
         <% } else { %>
          <% tasks.forEach(item => { %>
-            <div class="task-item">
+            <form class="task-item" action="complete-task" method="POST">
                 <button class="finish-task">Complete</button>
                 <p><%= item.task %></p>
                 
@@ -63,9 +63,9 @@
                 
                 <div class="utility-buttons">
                     <button>Edit Task</button>
-                    <button>Delete Task</button>
+                    <button formaction="/delete-task">Delete Task</button>
                 </div>
-            </div>
+            </form>
          <% }); %>
         <% } %>
     </div>
