@@ -51,10 +51,19 @@
             </div>
         <% } else { %>
          <% tasks.forEach(item => { %>
-            <div class="section-wrapper section-wrapper--task">
+            <div class="task-item">
+                <button class="finish-task">Complete</button>
                 <p><%= item.task %></p>
-                <p><%= item.category %></p>
-                <p><%= item.priority %></p>
+                
+                <div class="task-tags">
+                    <!-- TODO: Make these filter the current task layout -->
+                    <a><%= item.category %></a>
+                    <a><%= item.priority %></a>
+                </div>
+                
+                <div class="utility-buttons">
+                    <button></button>
+                </div>
             </div>
          <% }); %>
         <% } %>
