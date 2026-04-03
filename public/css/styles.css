@@ -112,3 +112,26 @@ input[type="submit"] {
     align-self: center;
     justify-self: center;
 }
+
+.alert {
+    margin: 2rem 30rem;
+    border: var(--secondary-color) solid 1px;
+    border-radius: 1rem;
+
+    /* TODO: Animations (in and out) */
+}
+
+.alert > * {
+    padding: 0 2rem;
+}
+
+.alert-success {
+    background-color: green;
+    color: white;
+}
+
+.alert-warning {
+    background-color: yellow;
+    color: var(--secondary-color);
+}
+

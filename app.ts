@@ -23,6 +23,16 @@ app.set('view engine', 'ejs');
 const tasks: { task: any; category: any; priority: any; }[] = [];
 const completedTasks: { task: any; category: any; priority: any; }[] = [];
 
+// Removes a task from the 'tasks' array, by its name
+function deleteTask(taskName: string, taskArray: Array<any>) {
+    // Find the index of the given taskName in the array
+    const index = taskArray.findIndex(item => item.task === taskName);
+    console.log(index);
+
+    // Remove 1 element at that index
+    taskArray.splice(index, 1);
+}
+
 app.get("/", (req, res) => {
     res.status(500);
     res.render('index', { tasks: tasks });
@@ -62,12 +72,14 @@ app.post("/delete-task", (req, res) => {
     console.log("Delete task");
     // Remove the task from the array
     const { taskRemove, category, priority }  = req.body;
-    console.log("Task to remove: ", taskRemove);
-    const index = tasks.findIndex(task => task.task == taskRemove);
-    
-    if (index != -1) {
-        tasks.splice(index, 1);
+    deleteTask(taskRemove, tasks)
+
+    // Render alert
+    const alert = {
+        type: "warning",
+        title: "Task Deleted!"
     }
+    res.render("index", {tasks, alert})
 })
 
 app.listen(PORT, (error) => {

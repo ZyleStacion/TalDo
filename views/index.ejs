@@ -9,8 +9,8 @@
 <body>
     <!-- Conditional alert rendering -->
      <% if (locals.alert) { %>
-      <div class="alert-<%=alert.type %>">
-        <p><%=alert.title%></p>
+      <div class="alert alert-<%=alert.type %>">
+        <h2><%=alert.title%></h2>
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
       </div>
      <% } %>
