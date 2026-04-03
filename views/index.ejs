@@ -7,6 +7,14 @@
     <title>TalDo</title>
 </head>
 <body>
+    <!-- Conditional alert rendering -->
+     <% if (locals.alert) { %>
+      <div class="alert-<%=alert.type %>">
+        <p><%=alert.title%></p>
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+      </div>
+     <% } %>
+    
     <!-- Greeting section -->
     <div class="greeting">
         <h1>Welcome to TalDo</h1>
@@ -51,7 +59,7 @@
             </div>
         <% } else { %>
          <% tasks.forEach(item => { %>
-            <form class="task-item" action="complete-task" method="POST">
+            <form class="task-item" action="/complete-task" method="POST">
                 <button class="finish-task">Complete</button>
                 <p><%= item.task %></p>
                 

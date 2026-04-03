@@ -21,6 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 
 const tasks: { task: any; category: any; priority: any; }[] = [];
+const completedTasks: { task: any; category: any; priority: any; }[] = [];
 
 app.get("/", (req, res) => {
     res.status(500);
@@ -42,9 +43,19 @@ app.post("/add-task", (req, res) =>{
 app.post("/complete-task", (req, res) => {
     console.log("Completed task!");
 
+    // Get task info
+    const { task, category, priority } = req.body;
+    
     // Render alert
+    const alert = {
+        type: "success",
+        title: "Task Complete!"
+    };
 
-    // Update task list
+    // Remove the task from active task list, then add it to completed tasks
+    completedTasks.push({task, category, priority});
+
+    res.render("index", { tasks: tasks, alert: alert })
 })
 
 app.post("/delete-task", (req, res) => {
