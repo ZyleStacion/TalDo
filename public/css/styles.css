@@ -116,13 +116,24 @@ input[type="submit"] {
     justify-self: center;
 }
 
+/* Alert notifications */
 .alert {
     display: flex;
+    flex-direction: row;
     margin: 2rem 30rem;
     border: var(--secondary-color) solid 1px;
     border-radius: 1rem;
 
     /* TODO: Animations (in and out) */
+    
+}
+
+.closebtn {
+
+}
+
+.closebtn:hover {
+    box-shadow: 2px 2px #000000;
 }
 
 .alert > * {
