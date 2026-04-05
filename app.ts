@@ -35,7 +35,7 @@ function deleteTask(taskName: string, taskArray: Array<any>) {
 
 app.get("/", (req, res) => {
     res.status(500);
-    res.render('index', { tasks: tasks });
+    res.render('index', { tasks: tasks , complete: completedTasks});
 })
 
 app.post("/add-task", (req, res) =>{
