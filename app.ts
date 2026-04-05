@@ -62,10 +62,11 @@ app.post("/complete-task", (req, res) => {
         title: "Task Complete!"
     };
 
-    // Remove the task from active task list, then add it to completed tasks
+    // Add the compelted task to the complete array, then remove it from the current task list
     completedTasks.push({task, category, priority});
+    deleteTask(task, tasks)
 
-    res.render("index", { tasks: tasks, alert: alert })
+    res.render("index", { tasks: tasks, alert: alert , complete: completedTasks})
 })
 
 app.post("/delete-task", (req, res) => {
@@ -79,7 +80,7 @@ app.post("/delete-task", (req, res) => {
         type: "warning",
         title: "Task Deleted!"
     }
-    res.render("index", {tasks, alert})
+    res.render("index", {tasks, alert, complete: completedTasks})
 })
 
 app.listen(PORT, (error) => {
