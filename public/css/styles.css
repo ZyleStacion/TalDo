@@ -3,9 +3,9 @@
     --secondary-color: #424B54;
     --tertiary-color: #83878a;
     --bg-color: #FFFFFF;
-    --danger: #cc3300;
-    --warning: #ffcc00;
-    --success: #339900;
+    --danger: #cc330094;
+    --warning: #ffcc0094;
+    --success: #33990094;
 }
 
 .greeting > * {
@@ -80,7 +80,6 @@ input[type="submit"] {
     margin-top: 0px;
 }
 
-/* TODO: Create a new class using grid to achieve a more complex layout */
 .task-item {
     margin: 2rem 30rem;
     border: var(--secondary-color) solid 1px;
@@ -123,22 +122,23 @@ input[type="submit"] {
     margin: 2rem 30rem;
     border: var(--secondary-color) solid 1px;
     border-radius: 1rem;
-
+    align-items: center;
     /* TODO: Animations (in and out) */
     
 }
 
-.closebtn {
+.alert > * {
+    padding: 0 2rem;
+    color: var(--secondary-color);
+}
 
+.closebtn {
+    font-size: 30px;
+    margin-left: auto;
 }
 
 .closebtn:hover {
-    box-shadow: 2px 2px #000000;
-}
-
-.alert > * {
-    padding: 0 2rem;
-    color: white;
+    text-shadow: 2px 2px 2px var(--secondary-color);
 }
 
 .alert-success {
@@ -153,3 +153,40 @@ input[type="submit"] {
     background-color: var(--danger);
 }
 
+/* Priority and Category */
+
+.task-tags > a {
+    display: inline-block;
+    border-radius: 16px;
+    text-align: center;
+    min-width: 50px;
+    padding: 0 9px;
+}
+
+.priority-High {
+    background-color: var(--danger);
+}
+
+.priority-Medium {
+    background-color: var(--warning);
+}
+
+.priority-Low {
+    background-color: var(--success);
+}
+
+.category-Personal {
+    background-color: lightblue;
+}
+
+.category-Work {
+    background-color: yellow;
+}
+
+.category-School {
+    background-color: greenyellow;
+}
+
+.category-Health {
+    background-color: lightcoral;
+}

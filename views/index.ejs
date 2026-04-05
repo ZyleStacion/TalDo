@@ -65,8 +65,8 @@
                 
                 <div class="task-tags">
                     <!-- TODO: Make these filter the current task layout -->
-                    <a><%= item.category %></a>
-                    <a><%= item.priority %></a>
+                    <a class="category-<%= item.category %>"><%= item.category %></a>
+                    <a class="priority-<%= item.priority %>"><%= item.priority %></a>
                 </div>
                 
                 <div class="utility-buttons">
